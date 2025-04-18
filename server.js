@@ -18,4 +18,9 @@ app.get('/api/db-test', async (req, res) => {
   }
 });
 
+app.use(cors({
+  origin: 'https://golden-sorbet-e6f13c.netlify.app',
+  credentials: true, // 세션/쿠키 사용 시 필요
+}));
+
 app.listen(PORT, () => console.log(`✅ 서버가 ${PORT}번 포트에서 실행 중입니다.`));
