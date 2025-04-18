@@ -20,8 +20,15 @@ app.get('/api/db-test', async (req, res) => {
 });
 
 app.use(cors({
-  origin: 'https://golden-sorbet-e6f13c.netlify.app',
-  credentials: true, // 세션/쿠키 사용 시 필요
+  origin: function (origin, callback) {
+    const allowList = ['https://golden-sorbet-e6f13c.netlify.app'];
+    if (!origin || allowList.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
 }));
 
 app.listen(PORT, () => console.log(`✅ 서버가 ${PORT}번 포트에서 실행 중입니다.`));
