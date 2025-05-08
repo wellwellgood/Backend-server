@@ -5,6 +5,7 @@ const allowedOrigins = [
   "https://myappboard.netlify.app",
   "http://localhost:3000",
   "http://locahost:4000",
+  "https://react-server-wmqa.onrender.com/"
 ];
 
 const corsOptions = {
