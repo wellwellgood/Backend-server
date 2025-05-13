@@ -32,6 +32,10 @@ app.get("/", (req, res) => {
 // ✅ 소켓 서버 연결
 socket(server);
 
+console.log("🔥 회원가입 요청 도착!!!!");
+console.log("📦 req.body 내용:", req.body);
+console.error("❌ 에러 발생!!!!:", err);
+
 // ✅ 서버 시작
 server.listen(PORT, () => {
   console.log(`🚀 서버 실행 중: http://localhost:${PORT}`);
