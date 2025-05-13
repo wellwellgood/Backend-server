@@ -32,8 +32,8 @@ app.get("/", (req, res) => {
 // ✅ 소켓 서버 연결
 socket(server);
 
+
 console.log("🔥 회원가입 요청 도착!!!!");
-console.log("📦 req.body 내용:", req.body);
 
 // ✅ 서버 시작
 server.listen(PORT, () => {
