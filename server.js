@@ -24,6 +24,7 @@ app.use("/api/messages", messageRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/chat", chatRoutes); // (채팅 로그 API)
 app.use("api/auth/register", authRoutes); // (회원가입 API)
+app.use("/api/login", authRoutes); // (로그인 API)
 
 // ✅ 서버 상태 확인
 app.get("/", (req, res) => {
