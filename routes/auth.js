@@ -3,7 +3,6 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const pool = require("../DB.js");
-const conn = await pool.getConnection();
 
 const router = express.Router();
 
