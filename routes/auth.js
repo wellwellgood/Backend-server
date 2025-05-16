@@ -155,7 +155,5 @@ router.post("/logout", (req, res) => {
   res.status(200).json({ message: "로그아웃 성공" });
 });
 
-conn.release();
-
 
 module.exports = router;
