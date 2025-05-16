@@ -1,13 +1,13 @@
 // server.js - ES Module version
-import dotenv from "dotenv";
-import express from "express";
-import http from "http";
-import corsMiddleware from "./middlewares/cors.js";
-import authRoutes from "./routes/auth.js";
-import messageRoutes from "./routes/message.js";
-import uploadRoutes from "./routes/uploadRouter.js";
-import chatRoutes from "./chatLog/logs.js"; // (채팅 로그용 API)
-import initializeSocket from "./socket.js"; // 소켓 파일 불러오기
+const dotenv = require ("dotenv");
+const express = require ("express");
+const http = require ("http");
+const corsMiddleware = require ("./middlewares/cors.js");
+const authRoutes = require ("./routes/auth.js");
+const messageRoutes = require ("./routes/message.js");
+const uploadRoutes = require ("./routes/uploadRouter.js");
+const chatRoutes = require ("./chatLog/logs.js"); // (채팅 로그용 API)
+const initializeSocket = require ("./socket.js"); // 소켓 파일 불러오기
 
 dotenv.config();
 
