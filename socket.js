@@ -1,7 +1,8 @@
-const { Server } = require('socket.io');
-const pool = require('./DB'); // DB 연결 모듈
+// socket.js - ES Module version
+import { Server } from 'socket.io';
+import pool from './DB.js'; // Note the .js extension is required in ES Modules
 
-module.exports = (server) => {
+export default function(server) {
   const io = new Server(server, {
     cors: {
       origin: 'http://localhost:4000',
