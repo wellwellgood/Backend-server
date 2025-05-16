@@ -1,9 +1,11 @@
 {
   "name": "backend-server",
   "version": "1.0.0",
+  "type": "commonjs",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
+    
   },
   "dependencies": {
     "axios": "^1.9.0",
